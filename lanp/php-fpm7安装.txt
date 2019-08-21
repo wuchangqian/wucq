@@ -1,0 +1,121 @@
+#### libiconv库gets错误
+cd /opt/ && wget http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.14.tar.gz
+tar xfz libiconv-1.14.tar.gz
+cd libiconv-1.14  && sed -ir -e '/gets is a security/d' ./srclib/stdio.in.h
+./configure && make && make install
+
+
+下载php7
+wget http://cn2.php.net/distributions/php-7.1.11.tar.bz2
+解压php7
+tar -xjf php-7.1.11.tar.bz2
+进入php目录
+cd php-7.1.11
+安装依赖包
+# 直接复制下面一行（不包括本行）
+yum install libxml2 libxml2-devel openssl openssl-devel bzip2 bzip2-devel libcurl libcurl-devel libjpeg libjpeg-devel libpng libpng-devel freetype freetype-devel gmp gmp-devel libmcrypt libmcrypt-devel readline readline-devel libxslt libxslt-devel
+编译配置（如果出现错误，基本都是上一步的依赖文件没有安装所致）
+嫌麻烦的可以从这一步起参考PHP官方安装说明：http://php.net/manual/zh/install.unix.nginx.php
+./configure \
+--prefix=/usr/local/php7 \
+--with-config-file-path=/usr/local/php7/etc \
+--enable-fpm \
+--with-fpm-user=www  \
+--with-fpm-group=www \
+--enable-inline-optimization \
+--disable-debug \
+--disable-rpath \
+--enable-shared  \
+--enable-soap \
+--with-libxml-dir \
+--with-xmlrpc \
+--with-openssl \
+--with-mcrypt \
+--with-mhash \
+--with-pcre-regex \
+--with-sqlite3 \
+--with-zlib \
+--enable-bcmath \
+--with-iconv \
+--with-bz2 \
+--enable-calendar \
+--with-curl \
+--with-cdb \
+--enable-dom \
+--enable-exif \
+--enable-fileinfo \
+--enable-filter \
+--with-pcre-dir \
+--enable-ftp \
+--with-gd \
+--enable-intl \
+--with-openssl-dir \
+--with-jpeg-dir \
+--with-png-dir \
+--with-zlib-dir  \
+--with-freetype-dir \
+--enable-gd-native-ttf \
+--enable-gd-jis-conv \
+--with-gettext \
+--with-gmp \
+--with-mhash \
+--enable-json \
+--enable-mbstring \
+--enable-mbregex \
+--enable-mbregex-backtrack \
+--with-libmbfl \
+--with-onig \
+--enable-pdo \
+--enable-intl \
+--with-mysqli=mysqlnd \
+--with-pdo-mysql=mysqlnd \
+--with-zlib-dir \
+--with-pdo-sqlite \
+--with-readline \
+--enable-session \
+--enable-shmop \
+--enable-simplexml \
+--enable-sockets  \
+--enable-sysvmsg \
+--enable-sysvsem \
+--enable-sysvshm \
+--enable-wddx \
+--with-libxml-dir \
+--with-xsl \
+--enable-zip \
+--enable-mysqlnd-compression-support \
+--with-pear \
+--enable-opcache
+
+### 如果出错
+checking for icu-config... no
+checking for location of ICU headers and libraries... not found
+configure: error: Unable to detect ICU prefix or no failed. Please verify ICU install prefix and make sure icu-config works.
+
+yum install libicu-devel
+
+make -j 8 && make install
+
+vi /etc/profile
+在末尾追加
+PATH=$PATH:/usr/local/php7/bin
+export PATH
+
+执行命令使得改动立即生效
+source /etc/profile
+
+配置php-fpm
+cp -a /opt/php-7.1.11/php.ini-production /usr/local/php7/etc/php.ini
+mv /usr/local/php7/etc/php-fpm.conf.default /usr/local/php7/etc/php-fpm.conf
+mv /usr/local/php7/etc/php-fpm.d/www.conf.default /usr/local/php7/etc/php-fpm.d/www.conf
+cp /opt/php-7.1.11/sapi/fpm/init.d.php-fpm /etc/init.d/php-fpm7
+chmod +x /etc/init.d/php-fpm7
+
+
+vim /usr/local/php7/etc/php-fpm.d/www.conf
+修改
+listen = /dev/shm/php-fpm7.sock
+listen.owner = www
+listen.group = www
+
+/etc/init.d/php-fpm7 start

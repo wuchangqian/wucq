@@ -1,0 +1,37 @@
+./configure \
+--prefix=/usr/local/php56 \
+--with-config-file-path=/usr/local/php56/etc \
+--disable-ipv6 \
+--disable-debug \
+--enable-fpm \
+--enable-soap \
+--enable-sockets \
+--enable-gd-native-ttf \
+--enable-ftp \
+--enable-mbstring \
+--enable-exif \
+--enable-dom \
+--with-fpm-user=wcq \
+--with-fpm-group=staff \
+--with-openssl=/usr/local/Cellar/openssl/1.0.2p \
+--with-mysql=mysqlnd \
+--with-mysqli=mysqlnd \
+--with-pdo-mysql=mysqlnd \
+--with-mysql-sock=/tmp \
+--with-gd \
+--with-jpeg-dir \
+--with-png-dir \
+--with-freetype-dir \
+--with-iconv-dir \
+--with-zlib-dir \
+--with-mcrypt \
+--with-pear \
+--with-curl \
+--with-libxml-dir \
+--with-imap \
+--with-imap-ssl \
+--with-kerberos \
+--with-mhash \
+--enable-cli 
+
+
