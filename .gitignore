@@ -1,0 +1,10 @@
+*.bak
+*.tmp
+*.cache
+*.pyc
+__pycache__
+__pycache__/
+/cpp/main
+/cpp/main.exe
+/cpp/*.o
+*.o
