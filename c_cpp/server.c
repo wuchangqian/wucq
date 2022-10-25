@@ -16,6 +16,7 @@
 #define MAXLINE     1024
 #define LISTENQ     5
 #define SIZE        10
+/* add by wcq */
 
 typedef struct server_context_st
 {
