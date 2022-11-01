@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        width: 900px;
+        /*height: 1000px;*/
+        border: 1px solid green;
+        background-color: rgba(215,219,249,0.4);
+        display: -webkit-flex; /* Safari */
+        display: flex; /*  设为Flex 布局以后，子元素的float、clear和vertical-align属性将失效 */
+
+        /*********** flex容器的css样式******************
+        1.flex-direction   主轴方向
+        2.flex-wrap        主轴一行满了换行
+        3.flex-flow        1和2的组合
+        4.justify-content  主轴元素对齐方式
+        5.align-items      交叉轴元素对齐方式//单行
+        6.align-content    交叉轴行对齐方式//多行
+        **********************************************/
+        /* flex-direction: row ; row | row-reverse | column | column-reverse;
+        /* flex-wrap: nowrap , wrap ;wrap-reverse;*/
+        flex-flow: row wrap; /* flex-direction 和 flex-wrap的简写 */
+
+        /************************************************
+        1.flex-start (默认)靠着main-start对齐//参考常见术语(一般是左方向)
+        2.flex-end   靠着main-end对齐//参考常见术语(一般是右方向)
+        3.center     靠着主轴居中对齐//一般就是居中对齐
+        4.space-between 两端对齐，靠着容器壁，剩余空间平分
+        5.space-around  分散对齐，不靠着容器壁，剩余空间在每个项目二侧平均分配
+        6.space-evenly  平均对齐，不靠着容器壁，剩余空间平分
+        **************************************************/
+        justify-content: space-evenly ; 
+        align-items: baseline;/* flex-start | flex-end | center | baseline | stretch */
+        align-content:center; /* flex-start | flex-end | center | space-between | space-around | stretch */
+    }
+    .item{
+        border-radius: 4px;
+        width: 130px;
+        border: 1px solid #999;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 40px;
+        background: rgb(25 , 255 , 199 ,.1);
+        margin: 3px;
+
+        /**********flex 元素的css属性 ***************
+        order 排序
+        flex-grow：长大
+        flex-shrinik: 缩小
+        flex-basis: 有效宽度
+        align-self: 覆盖container align-items 属性
+        *******************************************/
+        order: 0;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+        /****************************************
+        1.auto(默认值): 继承 align-items 属性值;
+        2.flex-start: 与交叉轴起始线对齐;
+        3.flex-end: 与交叉轴终止线对齐;
+        4.center: 与交叉轴中间线对齐: 居中对齐;
+        5.stretch: 在交叉轴方向上拉伸;
+        6.baseline: 与基线对齐(与内容相关用得极少);
+        *****************************************/
+        /*align-self: stretch;*/
+    }
+    .item1{order: 1; height:60px ;}
+    .item2{order: 2; height:160px ; padding: 0 0 0 0}
+    .item3{order: 3; height:260px }
+    .item4{order: 4; height:120px }
+    .item5{order: 5; height:180px;padding:30px 0; }
+    .item6{order: 6; height:220px }
+    .item7{order: 7; height:310px }
+    .item8{order: 8; height:320px }
+    .item9{order: 9; height:50px ;align-self: stretch;}
+</style>
+<body>
+    
+    <div class="container">
+        <div class="item item1">11</div>
+        <div class="item item2">12</div>
+        <div class="item item3">13</div>
+        <div class="item item4">14</div>
+        <div class="item item5">15</div>
+        <div class="item item6">16</div>
+        <div class="item item7">17</div>
+        <div class="item item8">18</div>
+        <div class="item item9">19</div>
+    </div>
+</body>
+</html>
