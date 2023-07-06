@@ -1,4 +1,5 @@
-#!/usr/bin/env python3
+
+##!/usr/bin/env python3
 import pygame,sys,time,random
 from pygame.locals import *
 
@@ -12,7 +13,6 @@ snakeColor = pygame.Color(255,0,255)
 gameOverFontColor = pygame.Color(255,0,0)
 panelWidth = 1240
 panelHeight = 680
-
 
 # 贪吃蛇移动速度 数字越大前进越快
 gameSpeed = 3
