@@ -1,6 +1,46 @@
 #! /usr/bin/python
 import math
 import random
+from faker import Faker
+import sys
+
+def my_fn():
+    try:
+        print('hello')
+    finally:
+        print('world')
+my_fn();
+
+sys.exit();
+
+f = open('d:/t.pl');
+ary = f.readlines();
+for l in ary:
+    printf(l , l);
+f.close();
+
+
+
+
+def quick_sort(arr):
+  if len(arr) <= 1:
+    return arr
+  pivot = arr[len(arr) // 2]
+  left = [x for x in arr if x < pivot]
+  middle = [x for x in arr if x == pivot]
+  right = [x for x in arr if x > pivot]
+  return quick_sort(left) + middle + quick_sort(right)
+
+a=[1,3,4,55,5,677,9,2,4]
+
+b=quick_sort(a);
+print(b)
+
+sys.exit();
+
+fake = Faker(locale='zh_CN')
+print(fake.ssn());
+sys.exit();
 #coding utf8
 
 # rm = random.random() * 100 % 10

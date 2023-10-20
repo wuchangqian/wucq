@@ -1,4 +1,4 @@
-import urllib
+#import urllib
 import base64
 import rsa
 import binascii
@@ -11,17 +11,18 @@ postPara = {
         'ssosimplelogin': '1',
         'vsnf': '1',
         'vsnval': '',
-        'su': encodedUserName,
+        'su': 'encodedUserName',
         'service': 'miniblog',
-        'servertime': serverTime,
-        'nonce': nonce,
+        'servertime': 'serverTime',
+        'nonce': 'nonce',
         'pwencode': 'rsa2',
-        'sp': encodedPassWord,
+        'sp': 'encodedPassWord',
         'encoding': 'UTF-8',
         'prelt': '115',
-        'rsakv': rsakv,     
+        'rsakv': 'rsakv',     
         'url': 'http://weibo.com/ajaxlogin.php?framelogin=1&callback=parent.sinaSSOController.feedBackUrlCallBack',
         'returntype': 'META'
 }
-postData = urllib.urlencode(postPara)#网络编码
-print(postData);
+if __name__ == '__main__':
+        #postData = urllib.urlencode(postPara)#网络编码
+        print(postData);
