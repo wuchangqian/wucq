@@ -1,9 +1,11 @@
 'use strict';
-const {log , assert , table , error} = console
+const {log , assert , table , error , log:l} = console
 const {exit:E} = process // E() = process.exit();
 
-log(this);
-
+l(1);
+log(2);
+log(E)
+e();
 E();
 
 let c = Array.prototype[Symbol.unscopables]

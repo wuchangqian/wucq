@@ -1,13 +1,21 @@
 "use strict";
-const c = {...console}
 
-function* gene()
-{
-    yield 1;
-    yield 2;
+const {log , log:l } = console;
+
+function *fibs() {
+  let a = 0;
+  let b = 1;
+  while (true) {
+    yield a;
+    [a, b] = [b, a + b];
+  }
 }
 
 
-for(let x of gene()){
-    c.log(x)
-}
+let [first, second, third, fourth, fifth, sixth, seven] = fibs();
+l(first, second, third, fourth, fifth, sixth,seven);
+
+
+process.on('SIGHUP' , function(){
+    log('yes i am die....')
+})

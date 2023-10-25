@@ -1,16 +1,50 @@
 "use strict";
+/***********************************************
+ *  console 有如下函数:
+ * log:         [Function: log],
+ * warn:        [Function: warn],
+ * dir:         [Function: dir],
+ * time:        [Function: time],
+ * timeEnd:     [Function: timeEnd],
+ * timeLog:     [Function: timeLog],
+ * trace:       [Function: trace],
+ * assert:      [Function: assert],
+ * clear:       [Function: clear],
+ * count:       [Function: count],
+ * countReset:  [Function: countReset],
+ * group:       [Function: group],
+ * groupEnd:    [Function: groupEnd],
+ * table:       [Function: table],
+ * debug:       [Function: debug],
+ * info:        [Function: info],
+ * dirxml:      [Function: dirxml],
+ * error:       [Function: error],
+ * groupCollapsed: [Function: groupCollapsed],
+ * Console:     [Function: Console],
+ * profile:     [Function: profile],
+ * profileEnd:  [Function: profileEnd],
+ * timeStamp:   [Function: timeStamp],
+ * context:     [Function: context]
+**************************************************/
 
-const {log , info , debug , error , table , time , timeEnd , grid} = console
+
+const {log , info , debug , error , table , time , timeEnd , grid , dir} = console
+const {log:l , info:i , debug:d , error:e , table:tb , time:tm , timeEnd:te , grid:g} = console
+const {exit:E} = process;
+
+/** 
+l(globalThis);
+E();
+*/
 
 var someObject = { str: "Some text", id: 5};
-console.log(someObject);
+l(someObject);
 
 let name = 'world'
 log(`hello ${name}`);
 info('this is info');
 debug('this is debug');
 error('this is error');
-
 
 time('begin')
 
