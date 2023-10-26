@@ -8,15 +8,15 @@ log(`hello ${name}`)
 
 time('begin')
 let ary = [
-    [1 ,3 , 4,5,7]
-    ['ab' , 'c' , 'd' ,'e' ,'45']
+    {'a':'2' , 'b':'bb' , 'c':'cc'},
+    {'a':'2' , 'b':'bb' , 'c':'cc'},
 ];
 let tb = {
     a:'aaa',
     b:'bbb',
     c:'ccc'
 }
-table(ary , [1,2,3])
+table(ary , ['a','b','c'])
 
 table(tb)
 timeEnd('begin')

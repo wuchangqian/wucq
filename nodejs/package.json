@@ -1,0 +1,11 @@
+{
+    "name": "wcq-nodejs",
+    "main": "./main.js",
+    "version": "0.9.1",
+    "dependencies": {
+        "argv": "0.0.2"
+    },
+    "bin": {
+        "hello": "./bin/"
+    }
+}
