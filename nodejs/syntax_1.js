@@ -1,7 +1,9 @@
 "use strict";
 
-const {log,table} = console
+const {log, table, log:l} = console
 const c = {...console}
+
+
 
 const ary = [ 1 , 5 ,8]
 const [a , b , e] = [...ary]
@@ -14,6 +16,6 @@ const obj1 = { a: 111, b: 222 , c:'1c'};
 const obj2 = { c: 333, d: 444 };
 const merged = { ...obj1, ...obj2 };
 
-c.log(merged)
+l(merged)
 
-c.log(a_b);
+l(a_b);
