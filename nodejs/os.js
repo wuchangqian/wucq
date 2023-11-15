@@ -1,5 +1,8 @@
 "use strict";
-const {log,table} = console
+const {
+	log,
+	table
+} = console
 const os = require("os")
 
 log(os.version())
