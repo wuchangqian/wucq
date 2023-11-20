@@ -1,4 +1,4 @@
-#! /usr/bin/python
+#! /usr/bin/env python3
 import sys
 import time
 import urllib, urllib.parse, urllib.error, urllib.request
@@ -32,6 +32,6 @@ if __name__ == '__main__':
         pass
     # title = sys.argv.pop();
     # phone = sys.argv.pop();
-    sendsms(18858133489 , 'wangyu da shuai ge')
+    sendsms(13429109380 , 'wangyu da shuai ge')
     # sendsms()
     t();

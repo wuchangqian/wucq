@@ -25,19 +25,45 @@
  * profileEnd:  [Function: profileEnd],
  * timeStamp:   [Function: timeStamp],
  * context:     [Function: context]
-**************************************************/
+ **************************************************/
+
+const {
+    log,
+    info,
+    debug,
+    error,
+    table,
+    time,
+    timeEnd,
+    grid,
+    dir
+} = console
+const {
+    log: l,
+    info: i,
+    debug: d,
+    error: e,
+    table: tb,
+    time: tm,
+    timeEnd: te,
+    grid: g
+} = console
+const {
+    exit: E
+} = process;
+
+let w = Math.cos(60);
+
+l(w);
 
 
-const {log , info , debug , error , table , time , timeEnd , grid , dir} = console
-const {log:l , info:i , debug:d , error:e , table:tb , time:tm , timeEnd:te , grid:g} = console
-const {exit:E} = process;
+// l(globalThis);
+// E();
 
-/** 
-l(globalThis);
-E();
-*/
-
-var someObject = { str: "Some text", id: 5};
+var someObject = {
+    str: "Some text",
+    id: 5
+};
 l(someObject);
 
 let name = 'world'
@@ -48,18 +74,29 @@ error('this is error');
 
 time('begin')
 
-let aryOfObject = [
-    {'name':'wu' ,    'sex':'male' , 'age':'18' , 'title':'CTO'},
-    {'name':'zhang' , 'sex':'female' , 'age':'20' , 'title':'CFO'},
-    {'name':'wang' , 'sex':'male' , 'age':'20' , 'title':'CEO'},
-];
+let aryOfObject = [{
+    'name': 'wu',
+    'sex': 'male',
+    'age': '18',
+    'title': 'CTO'
+}, {
+    'name': 'zhang',
+    'sex': 'female',
+    'age': '20',
+    'title': 'CFO'
+}, {
+    'name': 'wang',
+    'sex': 'male',
+    'age': '20',
+    'title': 'CEO'
+}, ];
 
-table(aryOfObject , ['name','sex' , 'age' , 'title'])
+table(aryOfObject, ['name', 'sex', 'age', 'title'])
 
 let obj = {
-    name:'lily',
-    age:18,
-    email:'lily@gmail.com'
+    name: 'lily',
+    age: 18,
+    email: 'lily@gmail.com'
 }
 
 table(obj)

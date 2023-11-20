@@ -1,5 +1,8 @@
 "use strict";
-const {log:l , log} = console
+const {
+    log: l,
+    log
+} = console
 
 /** ****************************
  * 
