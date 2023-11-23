@@ -1,6 +1,6 @@
 "use strict";
-const {log:l , info , assert , table , error, dir} = console
-
+const {log, log:l , info , assert , table , error, dir} = console
+const {exit: E} = process;
 /********************************* 
  * ES6字符串增加的方法:
  * String.fromCodePoint()
@@ -15,6 +15,11 @@ const {log:l , info , assert , table , error, dir} = console
  * 实例方法：replaceAll()
  * 实例方法：at()
 ************************************/
+
+let l2 = Array.prototype.slice.apply({0:1, 1:2, 2:3, 3:4, 4:5, length: 5} ,[1,3] )
+
+log(l2);
+E();
 
 let unicodeStr = "\u0061\u0061\u0061\u0061\u0061\u{20BB7}";
 let s = 'wcq';
