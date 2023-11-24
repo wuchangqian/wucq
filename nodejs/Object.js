@@ -56,7 +56,16 @@ Object.isFrozen(obj)：判断一个对象是否被冻结。
 let o = {
     k0:'v0'
 };
+Object.defineProperty(o , 'shi' ,{
+    value:7
+})
 
+let pr1 = Object.getOwnPropertyDescriptor(o , 'shi')
+log(pr1)
+
+for(let p in o){
+    log(p)
+}
 let c1 = {
     k1:'v1'
 }
