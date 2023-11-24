@@ -3,8 +3,6 @@
 const {log, table, log:l} = console
 const c = {...console}
 
-
-
 const ary = [ 1 , 5 ,8]
 const [a , b , e] = [...ary]
 
