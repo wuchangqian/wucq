@@ -11,13 +11,12 @@ function! ExecuteCurrentFile()
   let filename=expand('%:t')
   let extname=expand('%:e')
   if extname == 'js'
-      execute "silent !node %:p 2>&1 | tee ~/.vim/tmp/output_".filename
+      execute "silent !node %:p 2>&1 | tee /tmp/vim_output_".filename
   else
       execute "silent !chmod +x %:p"
-      execute "silent !%:p 2>&1 | tee ~/.vim/tmp/output_".filename
+      execute "silent !%:p 2>&1 | tee /tmp/vim_output_".filename
   endif
-  execute "split ~/.vim/tmp/output_".filename
-  " execute "vsplit ~/.vim/tmp/output_".n
+  execute "split /tmp/vim_output_".filename
   " execute "redraw!"
 endfunction
 
