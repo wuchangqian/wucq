@@ -4,8 +4,8 @@ const {log} = console
 /***************************
  * 静态方法:
  * Array.from(arrayLike, [mapFn], [thisArg])
- * Array.fromAsync() 
- * Array.isArray(arg) 
+ * Array.fromAsync()
+ * Array.isArray(arg)
  * Array.of(...argv)
  *
  ***************************/
