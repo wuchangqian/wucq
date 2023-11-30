@@ -24,7 +24,9 @@ function! ExecuteCurrentFile()
 endfunction
 
 :nmap <leader>r :call ExecuteCurrentFile()<CR>
+noremap <leader>i :source ~/.vimrc<CR>
+
 noremap <c-b> :call ExecuteCurrentFile()<CR>
-:nmap <leader>bg :call ToggleBG()<CR>
+:nmap <leader>bgg :call ToggleBG()<CR>
 let g:Lf_ShortcutF = '<c-p>'
-" echom "每天都要对自己好点..."
+
