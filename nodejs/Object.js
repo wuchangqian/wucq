@@ -2,10 +2,41 @@
 const {
     log
 } = console;
-
 const {
     exit:E
 } = process;
+
+const obj2 = {
+  foo: 123,
+  get bar() { return 'abc' },
+  set bar(v) { this.foo = v }
+};
+
+let ol = Object.getOwnPropertyDescriptors(obj2)
+log(ol);
+E();
+
+const wcq = {
+    info:1,
+    error:2,
+    dir:3,
+    c:11,
+    c3:11,
+
+}
+let o12 = {..."hello"}
+//log(o12)
+const {info,error,dir, ...z} = wcq
+// log(dir)
+// log(z)
+let as1 = Object.assign({b: 'c'},
+  Object.defineProperty({[Symbol()]:3}, 'invisible', {
+    enumerable: true,
+    value: 'hello'
+  })
+)
+//log(as1)
+E();
 
 /*****************************
  Object 的实例方法:

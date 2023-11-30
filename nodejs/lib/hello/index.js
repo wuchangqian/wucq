@@ -1,4 +1,11 @@
 "use strict";
+const {log} = console
+let x = 1;
+let a = [];
+// a?.[++x];
+log(x)
+
+
 const {log:l} = console
 // console.log(require.main)
 // console.log(exports)
