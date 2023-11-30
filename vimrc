@@ -3,6 +3,9 @@ vnoremap jk <ESC>
 nnoremap mk :marks<CR>
 set autoread
 set number
+set sw=4
+set ts=4
+set ic
 " colorscheme hybrid
 " colorscheme solarized8_light
 " ctrl+b 运行当前脚本
@@ -21,7 +24,9 @@ function! ExecuteCurrentFile()
 endfunction
 
 :nmap <leader>r :call ExecuteCurrentFile()<CR>
+noremap <leader>i :source ~/.vimrc<CR>
+
 noremap <c-b> :call ExecuteCurrentFile()<CR>
-:nmap <leader>bg :call ToggleBG()<CR>
+:nmap <leader>bgg :call ToggleBG()<CR>
 let g:Lf_ShortcutF = '<c-p>'
-" echom "每天都要对自己好点..."
+
