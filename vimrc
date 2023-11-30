@@ -3,6 +3,9 @@ vnoremap jk <ESC>
 nnoremap mk :marks<CR>
 set autoread
 set number
+set sw=4
+set ts=4
+set ic
 " colorscheme hybrid
 " colorscheme solarized8_light
 " ctrl+b 运行当前脚本
