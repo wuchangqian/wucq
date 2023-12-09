@@ -1,6 +1,8 @@
 inoremap jk <ESC>
 vnoremap jk <ESC>
 nnoremap mk :marks<CR>
+set langmenu=zh_CN.UTF-8
+set helplang=cn
 set autoread
 set number
 set sw=4
@@ -24,9 +26,10 @@ function! ExecuteCurrentFile()
 endfunction
 
 :nmap <leader>r :call ExecuteCurrentFile()<CR>
+:nmap <M-b> :call ExecuteCurrentFile()<CR>
 noremap <leader>i :source ~/.vimrc<CR>
 
 noremap <c-b> :call ExecuteCurrentFile()<CR>
-:nmap <leader>bgg :call ToggleBG()<CR>
+nmap <leader>bg :call ToggleBG()<CR>
 let g:Lf_ShortcutF = '<c-p>'
 
