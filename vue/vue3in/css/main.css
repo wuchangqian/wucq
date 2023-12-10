@@ -1,0 +1,23 @@
+h1{
+  font-size: 18px;
+  width:100%;
+  margin:0 auto;
+  text-align: center;
+  border-bottom: 1px #ddd dashed;
+}
+.txtare{
+  width:300px;
+  height: 100px;
+  color:red;
+}
+.txtare1{
+  width:300px;
+  height: 100px;
+  color:green;
+}
+._active{
+  background-color : red;
+ }
+._current{
+  background-color : red;
+}
