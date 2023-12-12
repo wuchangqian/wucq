@@ -1,8 +1,7 @@
 <template>
   <div class="footer-bar">
     <ul>
-      <li v-for="(link , index) in footer" v-bind:key="link.route">
-        <!-- <router-link :to="link.link"> {{ index+1 }} {{ link.name}} </router-link> -->
+      <li v-for="(link) in footer" v-bind:key="link.route">
         <el-link type="info" to="link.link"> {{ link.name}} </el-link>
       </li>
     </ul>
@@ -25,12 +24,13 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .footer-bar{
-  height: 30px;
-  position: absolute;
-  bottom: 0;
-  background: #F5F7FA;
+  position: relative;
+  box-sizing: border-box;
+  height: 35px;
+  background:rgba(226, 236, 232, 0.679);
   border-top:1px dashed #edeaea;
   width:100%;
+  bottom:0;
   margin:0 auto;
 }
 ul {
