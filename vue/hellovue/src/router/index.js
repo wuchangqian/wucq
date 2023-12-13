@@ -14,6 +14,12 @@ export default new Router({
   linkActiveClass:'act-item',
   routes: [
     {
+      path: '*',
+      name: 'Default',
+      meta:{desc:'首页'},
+      component: Home,
+    },
+    {
       path: '/home',
       name: 'Home',
       meta:{desc:'首页'},

@@ -1,6 +1,7 @@
 <template>
   <div class="about">
     <h2>{{ title }}</h2>
+    <slot name="test1" ></slot>
     <div v-if="rand > 0.5">
       {{ rand }} rand > 0.5 Now you see me
     </div>
@@ -65,11 +66,9 @@ export default {
   methods:{
     addHeight:function(){
       let mydiv = this.$refs.mydiv;
-      //height += 10;
-      console.log(mydiv.innerHTML , mydiv.style.height);
-    
       height += 10;
-      mydiv.style.height= height + 'px'
+      mydiv.style.height= height + 'px';
+      console.log(this.$refs.maintitle);
     }
   },
   computed:{

@@ -46,7 +46,7 @@ export default {
     let route = this.$route
 
     let aryRouters = router.getRoutes()
-    console.log(aryRouters)
+    //console.log(aryRouters)
     let uid = Math.round(Math.random()*1000)
     let gid = Math.round(Math.random()*1000);
     for(let r of aryRouters){
@@ -64,8 +64,8 @@ export default {
   },
   methods:{
     handleSelect(key, keyPath) {
-        console.log(key, keyPath);
-      }
+      // console.log(key, keyPath);
+    }
   }
 }
 </script>

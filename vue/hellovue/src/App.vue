@@ -8,7 +8,18 @@
         <router-view name="default"></router-view>
       </keep-alive>
     </transition>
-    <com-footer></com-footer>
+
+    <com-footer>
+      <template #copyright="{msg , hao}">
+        <el-link>Copyright ©2021-2023 浙江德伦教育科技有限公司{{msg}} {{hao}}</el-link>
+      </template>
+      <template #beian>
+        <el-link>浙ICP备19033231号-15</el-link>
+      </template>
+      <template #gwab>
+        <el-link>浙公网安备33010602013036</el-link>
+      </template>
+    </com-footer>
   </div>
 </template>
 <script>
@@ -17,6 +28,8 @@
     name: 'App',
     data() {
       return {
+        msg:'hhhhh',
+        hao:2222,
         transitionName:'slide-left',
         routefrom: 'from',
         routeto:'to'
@@ -35,10 +48,8 @@
         const toDepth = to.path.split('/').length
         const fromDepth = from.path.split('/').length
         this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
-    
-        log(this.$router.mode)
+        //log(this.$router.mode)
       }
-      
     }
   }
 </script>
@@ -56,7 +67,6 @@ html,body{
   text-align: center;
   color: #1776d5;
   height: 100%;
-  border:1px solid red;
   margin-top: 0;
   height: 100%;
   padding: 0;

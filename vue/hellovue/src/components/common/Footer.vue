@@ -1,17 +1,31 @@
 <template>
-  <div class="footer-bar">
-    <ul>
-      <li v-for="(link) in footer" v-bind:key="link.route">
-        <el-link type="info" to="link.link"> {{ link.name}} </el-link>
-      </li>
-    </ul>
-  </div>
+
+    <el-row>
+      <el-col :span="8">
+        <slot name="copyright" :msg="msg" :hao="hao">
+          msg:{{ msg }} hao:{{ hao }}
+        </slot>
+      </el-col>
+      <el-col :span="4"><slot name="beian"></slot></el-col>
+      <el-col :span="5"><slot name="gwab"></slot></el-col>
+      <el-col :span="6" :offset="1">
+          <el-link v-for="(link) in footer" 
+          v-bind:key="link.route" :href="link.link"
+           size="mini"  
+           type='info'
+           icon="el-icon-star-on"
+           >{{ link.name }}</el-link>
+        
+      </el-col>
+    </el-row>
 </template>
 <script>
 const {log} = console;
 export default {
   data(){
     return {
+      msg:'yesitis',
+      hao:'3333',
       footer:[
         {name:'大马兰' , link:'https://www.mlhchuangye.com/'},
         {name:'小马兰' , link:'https://www.malanhuachuangye.com/'},
@@ -32,17 +46,5 @@ export default {
   width:100%;
   bottom:0;
   margin:0 auto;
-}
-ul {
-  width:100%;
-  list-style: circle;
-  margin:0;
-  padding:0;
-}
-li {
-  display: inline-block;
-  list-style: circle;
-  margin: 0 10px;
-  font-size:12px;
 }
 </style>
