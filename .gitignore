@@ -8,3 +8,4 @@ __pycache__/
 /cpp/main.exe
 /cpp/*.o
 *.o
+/html/*

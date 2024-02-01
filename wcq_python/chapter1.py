@@ -20,4 +20,4 @@ def myinfo(name,age,email):
 myinfo(myname,myage,myemail)
 
 
-登录错误:[刘圆语]与身份证号[330682198904200049]登记姓名不一致,实名认证失败!Array ( [returnCode] => 10009 [returnData] => Array ( ) [returnMsg] => 用户不存在 )
+
