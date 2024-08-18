@@ -16,7 +16,10 @@ function! ExecuteCurrentFile()
   let filename=expand('%:t')
   let extname=expand('%:e')
   if extname == 'js'
-      execute "silent !node %:p 2>&1 | tee /tmp/vim_output_".filename
+     execute "silent !node %:p 2>&1 | tee /tmp/vim_output_".filename
+  elseif &filetype == 'c'                                                  |~
+     execute "!gcc % -o %<"
+     execute "!time ./%<"
   else
       execute "silent !chmod +x %:p"
       execute "silent !%:p 2>&1 | tee /tmp/vim_output_".filename
