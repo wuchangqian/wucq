@@ -8,9 +8,10 @@
 <style>
     .container{
         width: 900px;
-        /*height: 1000px;*/
+        color:green;
+/*height: 1000px;*/
         border: 1px solid green;
-        background-color: rgba(215,219,249,0.4);
+        background: rgb(255,0,0);
         display: -webkit-flex; /* Safari */
         display: flex; /*  设为Flex 布局以后，子元素的float、clear和vertical-align属性将失效 */
 
@@ -41,11 +42,20 @@
     .item{
         border-radius: 4px;
         width: 130px;
-        border: 1px solid #999;
         text-align: center;
         vertical-align: middle;
         line-height: 40px;
-        background: rgb(25 , 255 , 199 ,.1);
+        /* background: rgb(25 , 255 , 199 ,.1); */
+        /* background: #58a linear-gradient(#77a0bb, #58a); */
+        padding: .3em .8em;
+        border: 1px solid rgba(0,0,0,.1);
+        background: #58a linear-gradient(hsla(0,0%,100%,.2),
+        transparent);
+        border-radius: .2em;
+        box-shadow: 0 .05em .25em rgba(0,0,0,.5);
+        color: yellow;
+        border: 3px solid currentColor;
+        text-shadow: 0 -.05em .05em rgba(0,0,0,.5);
         margin: 3px;
 
         /**********flex 元素的css属性 ***************
@@ -69,15 +79,34 @@
         *****************************************/
         /*align-self: stretch;*/
     }
-    .item1{order: 1; height:60px ;}
+    .item1{order: 1; height:60px;background:rgba(100,10,100,0.5)}
     .item2{order: 2; height:160px ; padding: 0 0 0 0}
     .item3{order: 3; height:260px }
     .item4{order: 4; height:120px }
-    .item5{order: 5; height:180px;padding:30px 0; }
+    .item5{order: 5; height:180px;padding:10px 0; }
     .item6{order: 6; height:220px }
     .item7{order: 7; height:310px }
     .item8{order: 8; height:320px }
     .item9{order: 9; height:50px ;align-self: stretch;}
+    .callout {
+        width:300px;
+        height: 300px;;
+        border: 10px solid #070;
+        background: white;
+        outline: 5px solid deeppink;
+     }
+    .callout::before {
+        content: "";
+        position: absolute;
+        top: 1.4em; 
+        left: 1em;
+        padding: .35em;
+        background: inherit;
+        border: inherit;
+        border-right: 0;
+        border-bottom: 0;
+        transform: rotate(45deg);
+    }
 </style>
 <body>
     
@@ -92,5 +121,6 @@
         <div class="item item8">18</div>
         <div class="item item9">19</div>
     </div>
+    <div class="callout" href="">ab3333c</div>
 </body>
 </html>

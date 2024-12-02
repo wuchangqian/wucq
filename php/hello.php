@@ -2,6 +2,8 @@
 <?php
 echo 'hello world!';
 echo 'hello';
+$a = json_encode([] , 0);
+print_r($a);
 function fnc112($a , $b)
 {
     echo $a + $b;

@@ -1,13 +1,6 @@
 #! /usr/bin/php
 <?php
 /**
- * Version: 1.0
- * Eydoc
- */
-
-
-
-/**
  * $ary : array
  * $val : String;
  * @return string;

@@ -8,9 +8,15 @@ set number
 set sw=4
 set ts=4
 set ic
-" colorscheme hybrid
+onoremap qq :normal! gg/a<cr>
+" :autocmd BufWrite * :echom "Writing buffer!"
+" set vim.o.number 
+ colorscheme hybrid
 " colorscheme solarized8_light
 " ctrl+b 运行当前脚本
+function! ExecuteCurrentFile_2()
+  call g:SayHello()
+endfunction
 function! ExecuteCurrentFile()
   execute "w"
   let filename=expand('%:t')
@@ -19,7 +25,7 @@ function! ExecuteCurrentFile()
      execute "silent !node %:p 2>&1 | tee /tmp/vim_output_".filename
   elseif &filetype == 'c'                                                  |~
      execute "!gcc % -o %<"
-     execute "!time ./%<"
+     " execute "!time ./%<"
   else
       execute "silent !chmod +x %:p"
       execute "silent !%:p 2>&1 | tee /tmp/vim_output_".filename
@@ -36,3 +42,4 @@ noremap <c-b> :call ExecuteCurrentFile()<CR>
 nmap <leader>bg :call ToggleBG()<CR>
 let g:Lf_ShortcutF = '<c-p>'
 
+source ~/.vim/wcq.vim
