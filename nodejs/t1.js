@@ -1,12 +1,21 @@
 "use strict";
 
-const {log} = console;
+const {debug,log,info,error} = console;
 
-function fn()
-{
-	"use strict";
-	let e = 4;
-}
+// const a = [1,2,4,5,6]
 
-log('hello world!');
+// let c = [...a,...a,...a]
 
+// debug(c);
+
+
+let s = '1234abc455'
+let t = s.replaceAll('b', '9$&9')
+log(t)
+
+
+let c = String.fromCharCode(0x20BB7)
+let d = String.fromCodePoint(0x20BB7)
+log(c);
+log(d)
+// log('hello world!');

@@ -25,14 +25,11 @@ function bin_search($ary, $val)
 function test()
 {
 
-	$start = 1;
-	$end = 100;
-	$tmp = range($start, $end);
-	$find = range($start - 5, $end + 5);
-	foreach ($find as $val) {
+	$tmp = range(1,30);
+	$val = 30;
 
-		echo "$val : ", bin_search($tmp, $val), "\n";
-	}
+	echo "$val : ", bin_search($tmp, $val), "\n";
+	
 
 }
 test();

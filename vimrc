@@ -31,7 +31,7 @@ function! ExecuteCurrentFile()
       execute "silent !%:p 2>&1 | tee /tmp/vim_output_".filename
   endif
   execute "split /tmp/vim_output_".filename
-  " execute "redraw!"
+  execute "redraw!"
 endfunction
 
 :nmap <leader>r :call ExecuteCurrentFile()<CR>
