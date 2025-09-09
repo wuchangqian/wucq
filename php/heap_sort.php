@@ -1,5 +1,9 @@
 <?php
 set_time_limit(1);
+$s = 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDNhY5c54olduR3gt7WKPxUggeLGS+h6uS5oTs++7bg9w3DG9rSx1bwWiEIB2V8qx+9wJUSx7HYWG19pcESTcXZx5N5BAie1Dt8huDwC0pHbzh+wl9e+2Vg6sI2SQBcXjtrzRkygLn5SqAmnr4q+If8B7ohpfe1efu5QGD1kbzYe8Imi6qVEYbfXj8iRsyfCCjHgbijIufl3Q6sJoU1mgZXY2Aah0MyZF0hQwfOcx2o9Q+G/QES0ohf45iW7LXXdTa1Q3bpyl3IMH5EJiHhDLaqc98m/clQ+zrtup+eMB/475TShIouWoi5C9aSPifHXPXUWTwd2thnX24OpOZ+lNKd';
+
+echo base64_decode($s);
+die;
 $ary = range(1,30);
 // print_r($ary);die;
 // $ary = [3,1,2];//

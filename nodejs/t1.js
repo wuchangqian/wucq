@@ -1,7 +1,11 @@
 "use strict";
-
+require(sys);// sys;
 const {debug,log,info,error} = console;
 
+
+log(typeof Symbol)
+
+sys.exit();
 // const a = [1,2,4,5,6]
 
 // let c = [...a,...a,...a]

@@ -1,5 +1,7 @@
 <?php
 set_time_limit(1);
+
+echo md5('1');die;
 $str = "6139
 6158
 6239

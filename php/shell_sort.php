@@ -1,7 +1,11 @@
 <?php
 $ary = range(0,39);
+echo strlen('dc5dc65c7e6cc3c404c6dd79d83b22b2fe9f489c');;
+__halt_compiler();
 
-
+echo md5('102373efe397be7555b3cc7e939e13c2302355');die;
+die;
+echo 9012.80 + 7287.40 + 2700;
 die;
 shuffle($ary);
 // 示例用法
@@ -64,16 +68,6 @@ function shellSort($ary){
     }
     return $ary; 
 }
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -1,15 +1,10 @@
 <?php
 
-$a = 0xA5000;
-$b = 0xdcfff;
-$a = 16;
-$b = 256;
 
 $ary = range(1,20);
-printf("%x , %x" , $a , $b);
-// echo ($b-$a + 1);die;
-die;
+
 shuffle($ary);
+print_r($ary);
 
 $ary = quick_sort($ary);
 print_r($ary);

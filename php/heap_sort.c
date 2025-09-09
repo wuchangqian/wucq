@@ -1,6 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
+/*
+
+
+<script>
+    // 是否乡村领雁测试
+    var is_xcly = false;
+    if(window.location.hostname.indexOf('cgsx666') > 0 ){
+      is_xcly = true;
+    }
+    var cl = '';
+    if(is_xcly){
+      cl = '<link rel="stylesheet" href="./css/index_xcly.css">';
+    }else{
+      cl = '<link rel="stylesheet" href="./css/index.css">';
+    }
+    document.write(cl)
+  </script>
+*/
+
 void swap(int* a, int* b) {
     int temp = *b;
     *b = *a;
